@@ -1,5 +1,6 @@
 #save your sites here
-sites = ["https://www.site1.com"]
+sites = ["https://www.site1.com","https://www.site2.com","https://www.site3.com",
+         "https://www.site4.com","https://www.site5.com","https://www.site6.com"]
 
 #scrapes the sites and dumps html into my_soup array (decoded from bytes)
 from urllib.request import Request, urlopen

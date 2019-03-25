@@ -17,9 +17,21 @@ import os
 path = os.getcwd()
 os.mkdir(path+"/my_files")
     
-########OUTPUT my_soup to text######
+######OUTPUT my_soup to text######
 import codecs
 for i in range(0,len(my_soup)-1):
-    text_ = codecs.open("/my_files/hard_money_output_"+str(i+1)+".txt", "w", "utf-8")
+    text_ = codecs.open("/my_files/output_"+str(i+1)+".txt", "w", "utf-8")
     text_.write(my_soup[i])
     text_.close()
+
+######COMBINE TEXT FILES######
+import shutil
+import glob
+
+with open("combined.txt", 'wb') as outfile:
+    for filename in glob.glob('my_files/*.txt'):
+        if filename == outfile:
+            # don't want to copy the output into the output
+            continue
+        with open(filename, 'rb') as readfile:
+            shutil.copyfileobj(readfile, outfile)

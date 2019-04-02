@@ -1,3 +1,4 @@
+#cleaning html with bs4 and nltk: https://stackoverflow.com/questions/26002076/python-nltk-clean-html-not-implemented
 #save your sites here
 sites = ["https://www.site1.com","https://www.site2.com","https://www.site3.com",
          "https://www.site4.com","https://www.site5.com","https://www.site6.com"]
